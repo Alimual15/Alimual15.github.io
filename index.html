@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Un quiz interactivo para poner a prueba tus conocimientos">
+<meta name="author" content="Alisson">
+<title>Quiz Interactivo</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+<style>
+body {
+background-image: url(assets/images/fondo.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+</style>
+</head>
+<body>
+<!-- Pantalla de Inicio -->
+<div id="inicio" class="pantalla">
+<h1>Bienvenido al Quiz Interactivo</h1>
+<p>Pon a prueba tus conocimientos respondiendo las siguientes preguntas.</p>
+<button id="comenzar-btn">Comenzar Quiz</button>
+</div>
+<!-- Pantalla de Preguntas -->
+<div id="preguntas" class="pantalla ocultar">
+  <div class="contenedor-pregunta">
+    <h2 id="pregunta-texto">Pregunta aquí</h2>
+    <ul id="opciones-lista">
+      <!-- Opciones de respuesta se generarán dinámicamente -->
+    </ul>
+    <!-- Añadir en la pantalla de preguntas -->
+    <div id="barra-progreso-container">
+      <div id="barra-progreso"></div>
+    </div>
+    <!-- Añadir en la pantalla de preguntas -->
+    <div id="temporizador">Tiempo restante: <span id="tiempo-restante">30</span> segundos</div>
+    <!-- Añadir la retroalimentación aquí -->
+    <div id="retroalimentacion" class="retroalimentacion ocultar"></div>
+    <!-- Añadir el botón de Siguiente aquí -->
+    <button id="siguiente-btn">Siguiente</button>
+  </div>
+</div>
+<!-- Añadir en el index.html después de la pantalla de preguntas -->
+<!-- Pantalla de Resultados -->
+<div id="resultados" class="pantalla ocultar">
+  <h2>¡Has completado el Quiz!</h2>
+  <p>Tu porcentaje: <span id="porcentaje-final"></span></p>
+  <p>Preguntas correctas: <span id="preguntas-correctas"></span></p>
+  <p>Puntos obtenidos: <span id="puntaje-correctas"></span></p>
+  <p id="mensaje-final"></p>
+  <button id="reiniciar-btn" class="ocultar">Reiniciar Quiz</button>
+  <br>
+  <button id="compartir-btn">Compartir resultados</button>
+</div>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
